@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance App Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Finance App Dashboard</h1>
+    </header>
+    <main>
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Total Income: $<span id="totalIncome">0</span></p>
+            <p>Total Expenses: $<span id="totalExpenses">0</span></p>
+            <p>Net Balance: $<span id="netBalance">0</span></p>
+        </section>
+
+        <section id="transactions">
+            <h2>Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transaction entries will go here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="addTransaction">
+            <h2>Add Transaction</h2>
+            <form id="transactionForm">
+                <input type="date" id="transactionDate" required>
+                <input type="text" id="transactionDescription" placeholder="Description" required>
+                <input type="number" id="transactionAmount" placeholder="Amount" required>
+                <select id="transactionType">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Finance App - All rights reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
